@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_ColorPicker
+  File name(文件名): test1
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/30
+  Time(创建时间)： 15:03
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <label>HTML5原生
+        <input v-model:value="value1" @change="change(value1)" type="color">
+    </label>
+    <br>
+    <br>
+    <label>element-ui
+        <el-color-picker v-model="value2" @change="change(value2)"></el-color-picker>
+    </label>
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            value1: null,
+            value2: null,
+        },
+        methods: {
+            change: function (value)
+            {
+                console.log(value)
+            }
+        },
+        mounted()
+        {
+
+        }
+    })
+</script>
+
+
+</body>
+</html>
